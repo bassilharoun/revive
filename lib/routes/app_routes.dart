@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:revive/presentation/complete_your_plan_container1_page/complete_your_plan_container1_page.dart';
 import 'package:revive/presentation/home_vone_container_screen/home_vone_container_screen.dart';
 import '../core/app_export.dart';
 import '../presentation/app_navigation_screen/app_navigation_screen.dart';
-import '../presentation/complete_your_plan_container_screen/complete_your_plan_container_screen.dart';
 import '../presentation/login_screen/login_screen.dart';
 import '../presentation/program_screen/program_screen.dart';
 import '../presentation/signup_screen/signup_screen.dart';
@@ -13,9 +13,6 @@ class AppRoutes {
   static const String signupScreen = '/signup_screen';
 
   static const String programScreen = '/program_screen';
-
-  static const String completeYourPlanContainerScreen =
-      '/complete_your_plan_container_screen';
 
   static const String completeYourPlanContainer1Page =
       '/complete_your_plan_container1_page';
@@ -36,8 +33,8 @@ class AppRoutes {
   static Map<String, WidgetBuilder> routes = {
     loginScreen: (context) => LoginScreen(),
     programScreen: (context) => ProgramScreen(),
-    completeYourPlanContainerScreen: (context) =>
-        CompleteYourPlanContainerScreen(),
+    completeYourPlanContainer1Page: (context) =>
+        CompleteYourPlanContainer1Page(),
     appNavigationScreen: (context) => AppNavigationScreen(),
     initialRoute: (context) => LoginScreen(),
     signupScreen: (context) => SignupScreen(),

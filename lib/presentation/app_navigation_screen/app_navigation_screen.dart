@@ -43,7 +43,7 @@ class AppNavigationScreen extends StatelessWidget {
                           context,
                           screenTitle: "Complete your plan - Container",
                           onTapScreenTitle: () => onTapScreenTitle(context,
-                              AppRoutes.completeYourPlanContainerScreen),
+                              AppRoutes.completeYourPlanContainer1Page),
                         )
                       ],
                     ),

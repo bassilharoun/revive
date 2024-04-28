@@ -8,10 +8,8 @@ import 'package:revive/theme/theme_helper.dart';
 import 'package:revive/widgets/custom_image_view.dart';
 import '../../core/app_export.dart';
 import '../../widgets/custom_elevated_button.dart';
-import 'widgets/exercisecard_item_widget.dart'; // ignore_for_file: must_be_immutable
-// ignore_for_file: must_be_immutable
+import 'widgets/exercisecard_item_widget.dart';
 
-// ignore_for_file: must_be_immutable
 class CompleteYourPlanContainer1Page extends StatelessWidget {
   CompleteYourPlanContainer1Page({Key? key})
       : super(
@@ -29,18 +27,20 @@ class CompleteYourPlanContainer1Page extends StatelessWidget {
           decoration: AppDecoration.fillGray,
           child: Column(
             children: [
+              SizedBox(height: 18.v),
+
               _buildRowArrowLeft(context),
               SizedBox(height: 18.v),
               Text(
                 "Rehabilitation plan made by your Therapist",
                 style: CustomTextStyles.bodySmall12,
               ),
-              SizedBox(height: 24.v),
+              // SizedBox(height: 24.v),
               _buildCalendar(context),
-              SizedBox(height: 30.v),
+              SizedBox(height: 12.v),
               _buildExerciseCard(context),
-              Spacer(),
-              SizedBox(height: 3.v),
+              // Spacer(),
+              SizedBox(height: 30.v),
               CustomElevatedButton(
                 text: "kick Start",
                 margin: EdgeInsets.only(

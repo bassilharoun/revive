@@ -22,10 +22,11 @@ class ProfilePage extends StatelessWidget {
           decoration: AppDecoration.fillGray,
           child: Column(
             children: [
+              SizedBox(height: 15.v),
               _buildStackLine(context),
               SizedBox(height: 13.v),
               Text(
-                "Gana ",
+                "Username ",
                 style: CustomTextStyles.titleSmallSemiBold,
               ),
               SizedBox(height: 2.v),

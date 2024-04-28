@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:revive/presentation/complete_your_plan_container1_page/complete_your_plan_container1_page.dart';
 import 'package:revive/routes/app_routes.dart';
 import '../../core/app_export.dart';
 import '../../widgets/custom_bottom_bar.dart';
@@ -46,11 +47,11 @@ class HomeVoneContainerScreen extends StatelessWidget {
       case BottomBarEnum.Home:
         return AppRoutes.homeVoneTabContainerPage;
       case BottomBarEnum.Revive:
-        return AppRoutes.profilePage;
+        return AppRoutes.completeYourPlanContainer1Page;
       case BottomBarEnum.Report:
         return "/";
       case BottomBarEnum.Profile:
-        return "/";
+        return AppRoutes.profilePage;
       default:
         return "/";
     }
@@ -61,10 +62,14 @@ class HomeVoneContainerScreen extends StatelessWidget {
     switch (currentRoute) {
       case AppRoutes.homeVoneTabContainerPage:
         return HomeVoneTabContainerPage();
+      case AppRoutes.completeYourPlanContainer1Page:
+        return CompleteYourPlanContainer1Page();
       case AppRoutes.profilePage:
         return ProfilePage();
       default:
-        return DefaultWidget();
+        return Container(
+          child: Text("hello"),
+        );
     }
   }
 }

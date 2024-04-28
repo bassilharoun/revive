@@ -164,7 +164,7 @@ class DefaultWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Please replace the respective Widget here',
+              'Widget',
               style: TextStyle(
                 fontSize: 18,
               ),
