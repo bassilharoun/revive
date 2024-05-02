@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:revive/presentation/complete_your_plan_container1_page/complete_your_plan_container1_page.dart';
 import 'package:revive/presentation/home_vone_container_screen/home_vone_container_screen.dart';
+import 'package:revive/presentation/on_bording/on_boarding_screen.dart';
+import 'package:revive/presentation/on_bording/widgets/on_boarding_slider.dart';
 import '../core/app_export.dart';
 import '../presentation/app_navigation_screen/app_navigation_screen.dart';
 import '../presentation/login_screen/login_screen.dart';
@@ -30,14 +32,17 @@ class AppRoutes {
 
   static const String profilePage = '/profile_page';
 
+  static const String onBoardingScreen = '/on_boarding_screen';
+
   static Map<String, WidgetBuilder> routes = {
     loginScreen: (context) => LoginScreen(),
     programScreen: (context) => ProgramScreen(),
     completeYourPlanContainer1Page: (context) =>
         CompleteYourPlanContainer1Page(),
     appNavigationScreen: (context) => AppNavigationScreen(),
-    initialRoute: (context) => LoginScreen(),
+    initialRoute: (context) => OnBoardingScreen(),
     signupScreen: (context) => SignupScreen(),
     homeVoneContainerScreen: (context) => HomeVoneContainerScreen(),
+    onBoardingScreen: (context) => OnBoardingScreen(),
   };
 }
