@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:easy_date_timeline/easy_date_timeline.dart';
 import 'package:revive/core/utils/image_constant.dart';
 import 'package:revive/core/utils/size_utils.dart';
+import 'package:revive/routes/app_routes.dart';
 import 'package:revive/theme/app_decoration.dart';
 import 'package:revive/theme/custom_text_style.dart';
 import 'package:revive/theme/theme_helper.dart';
@@ -11,10 +12,6 @@ import '../../widgets/custom_elevated_button.dart';
 import 'widgets/exercisecard_item_widget.dart';
 
 class CompleteYourPlanContainer1Page extends StatelessWidget {
-  CompleteYourPlanContainer1Page({Key? key})
-      : super(
-          key: key,
-        );
 
   DateTime selectedDatesFromCalendar1 = DateTime.now();
 
@@ -42,6 +39,12 @@ class CompleteYourPlanContainer1Page extends StatelessWidget {
               // Spacer(),
               SizedBox(height: 30.v),
               CustomElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context,
+                    AppRoutes.getReadyScreen,
+                  );
+                },
                 text: "kick Start",
                 margin: EdgeInsets.only(
                   left: 15.h,

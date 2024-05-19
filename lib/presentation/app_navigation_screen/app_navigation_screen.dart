@@ -3,7 +3,6 @@ import 'package:revive/core/utils/size_utils.dart';
 import 'package:revive/routes/app_routes.dart';
 import 'package:revive/theme/app_decoration.dart';
 import 'package:revive/theme/theme_helper.dart';
-import '../../core/app_export.dart';
 
 class AppNavigationScreen extends StatelessWidget {
   const AppNavigationScreen({Key? key})

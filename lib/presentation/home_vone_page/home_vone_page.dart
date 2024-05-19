@@ -43,7 +43,7 @@ class HomeVonePageState extends State<HomeVonePage>
         Padding(
           padding: EdgeInsets.only(left: 3.h),
           child: Text(
-            "Recovery Programs",
+            "My Programs",
             style: CustomTextStyles.titleMedium.copyWith(
               color: appTheme.black900,
             ),

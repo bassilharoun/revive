@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:revive/presentation/complete_your_plan_container1_page/complete_your_plan_container1_page.dart';
+import 'package:revive/presentation/get_ready/get_ready_screen.dart';
 import 'package:revive/routes/app_routes.dart';
 import '../../core/app_export.dart';
 import '../../widgets/custom_bottom_bar.dart';
