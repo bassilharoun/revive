@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:revive/presentation/complete_your_plan_container1_page/complete_your_plan_container1_page.dart';
-import 'package:revive/presentation/get_ready/get_ready_screen.dart';
+import 'package:revive/presentation/live_excercise/live_excercise.dart';
+import 'package:revive/presentation/program_screen/program_screen.dart';
+import 'package:revive/presentation/reports_screen/reports_screen.dart';
 import 'package:revive/routes/app_routes.dart';
-import '../../core/app_export.dart';
 import '../../widgets/custom_bottom_bar.dart';
-import '../home_vone_tab_container_page/home_vone_tab_container_page.dart';
+import '../home_screen/home_screen.dart';
 import '../profile_page/profile_page.dart';
 
-class HomeVoneContainerScreen extends StatelessWidget {
-  HomeVoneContainerScreen({Key? key})
+class AppHolder extends StatelessWidget {
+  AppHolder({Key? key})
       : super(
           key: key,
         );
@@ -21,7 +22,7 @@ class HomeVoneContainerScreen extends StatelessWidget {
       child: Scaffold(
         body: Navigator(
           key: navigatorKey,
-          initialRoute: AppRoutes.homeVoneTabContainerPage,
+          initialRoute: AppRoutes.homeScreen,
           onGenerateRoute: (routeSetting) => PageRouteBuilder(
             pageBuilder: (ctx, ani, ani1) => getCurrentPage(routeSetting.name!),
             transitionDuration: Duration(seconds: 0),
@@ -46,11 +47,11 @@ class HomeVoneContainerScreen extends StatelessWidget {
   String getCurrentRoute(BottomBarEnum type) {
     switch (type) {
       case BottomBarEnum.Home:
-        return AppRoutes.homeVoneTabContainerPage;
+        return AppRoutes.homeScreen;
       case BottomBarEnum.Revive:
         return AppRoutes.completeYourPlanContainer1Page;
       case BottomBarEnum.Report:
-        return "/";
+        return AppRoutes.reportsScreen;
       case BottomBarEnum.Profile:
         return AppRoutes.profilePage;
       default:
@@ -61,15 +62,22 @@ class HomeVoneContainerScreen extends StatelessWidget {
   ///Handling page based on route
   Widget getCurrentPage(String currentRoute) {
     switch (currentRoute) {
-      case AppRoutes.homeVoneTabContainerPage:
+      case AppRoutes.homeScreen:
         return HomeVoneTabContainerPage();
       case AppRoutes.completeYourPlanContainer1Page:
         return CompleteYourPlanContainer1Page();
       case AppRoutes.profilePage:
         return ProfilePage();
+      case AppRoutes.liveExcerciseScreen:
+        return LiveExerciseScreen();
+
+      case AppRoutes.reportsScreen:
+        return ReportsScreen();
+      case AppRoutes.programScreen:
+        return ProgramScreen();
       default:
         return Container(
-          child: Text("hello"),
+          child: Center(child: Text("Page not found")), // Updated default case
         );
     }
   }

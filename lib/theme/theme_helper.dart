@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:revive/core/utils/size_utils.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../core/app_export.dart';
 
 String _appTheme = "primary";
@@ -74,43 +74,43 @@ class TextThemes {
   static TextTheme textTheme(ColorScheme colorScheme) => TextTheme(
         bodyMedium: TextStyle(
           color: appTheme.black900,
-          fontSize: 13.fSize,
+          fontSize: 13.sp,
           fontFamily: 'Lexend',
           fontWeight: FontWeight.w400,
         ),
         bodySmall: TextStyle(
           color: appTheme.black900.withOpacity(0.75),
-          fontSize: 10.fSize,
+          fontSize: 10.sp,
           fontFamily: 'Lexend',
           fontWeight: FontWeight.w400,
         ),
         labelLarge: TextStyle(
           color: appTheme.black900,
-          fontSize: 12.fSize,
+          fontSize: 12.sp,
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w500,
         ),
         labelMedium: TextStyle(
           color: colorScheme.onPrimary,
-          fontSize: 11.fSize,
+          fontSize: 11.sp,
           fontFamily: 'Lexend',
           fontWeight: FontWeight.w500,
         ),
         titleLarge: TextStyle(
           color: appTheme.black900,
-          fontSize: 20.fSize,
+          fontSize: 20.sp,
           fontFamily: 'Lexend',
           fontWeight: FontWeight.w500,
         ),
         titleMedium: TextStyle(
           color: colorScheme.onPrimary,
-          fontSize: 17.fSize,
+          fontSize: 17.sp,
           fontFamily: 'Lexend',
           fontWeight: FontWeight.w600,
         ),
         titleSmall: TextStyle(
           color: appTheme.black900,
-          fontSize: 14.fSize,
+          fontSize: 14.sp,
           fontFamily: 'Lexend',
           fontWeight: FontWeight.w500,
         ),

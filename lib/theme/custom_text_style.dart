@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:revive/core/utils/size_utils.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:revive/theme/theme_helper.dart';
-import '../core/app_export.dart';
 
 extension on TextStyle {
   TextStyle get poppins {
@@ -23,61 +22,61 @@ extension on TextStyle {
 class CustomTextStyles {
   // Body text style
   static get bodySmall11 => theme.textTheme.bodySmall!.copyWith(
-        fontSize: 11.fSize,
+        fontSize: 11.sp,
       );
   static get bodySmall12 => theme.textTheme.bodySmall!.copyWith(
-        fontSize: 12.fSize,
+        fontSize: 12.sp,
       );
   static get bodySmallBlack900 => theme.textTheme.bodySmall!.copyWith(
         color: appTheme.black900.withOpacity(0.61),
-        fontSize: 11.fSize,
+        fontSize: 11.sp,
       );
   static get bodySmallBlack90011 => theme.textTheme.bodySmall!.copyWith(
         color: appTheme.black900.withOpacity(0.85),
-        fontSize: 11.fSize,
+        fontSize: 11.sp,
       );
   static get bodySmallBlack90011_1 => theme.textTheme.bodySmall!.copyWith(
         color: appTheme.black900,
-        fontSize: 11.fSize,
+        fontSize: 11.sp,
       );
   static get bodySmallBlack900_1 => theme.textTheme.bodySmall!.copyWith(
         color: appTheme.black900.withOpacity(0.76),
       );
   static get bodySmallGray400 => theme.textTheme.bodySmall!.copyWith(
         color: appTheme.gray400,
-        fontSize: 11.fSize,
+        fontSize: 11.sp,
       );
   static get bodySmallPrimary => theme.textTheme.bodySmall!.copyWith(
         color: theme.colorScheme.primary,
-        fontSize: 11.fSize,
+        fontSize: 11.sp,
       );
 
   static get bodySmallGreen600 => theme.textTheme.bodySmall!.copyWith(
         color: appTheme.green600,
-        fontSize: 10.fSize,
+        fontSize: 10.sp,
       );
 // Label text style
 
   static get labelLarge => theme.textTheme.labelLarge!.copyWith(
-        fontSize: 13.fSize,
+        fontSize: 13.sp,
       );
 
   static get labelLargeLexend => theme.textTheme.labelLarge!.lexend.copyWith(
-        fontSize: 13.fSize,
+        fontSize: 13.sp,
         fontWeight: FontWeight.w600,
       );
 
   static get labelLargeLexendGray600 =>
       theme.textTheme.labelLarge!.lexend.copyWith(
         color: appTheme.gray600,
-        fontSize: 13.fSize,
+        fontSize: 13.sp,
       );
   static get labelLargePrimary => theme.textTheme.labelLarge!.copyWith(
         color: theme.colorScheme.primary,
         fontWeight: FontWeight.w600,
       );
   static get labelLargeSemiBold => theme.textTheme.labelLarge!.copyWith(
-        fontSize: 13.fSize,
+        fontSize: 13.sp,
         fontWeight: FontWeight.w600,
       );
 // Title text style
@@ -85,7 +84,7 @@ class CustomTextStyles {
 
   static get titleLargePrimary => theme.textTheme.titleLarge!.copyWith(
         color: theme.colorScheme.primary,
-        fontSize: 21.fSize,
+        fontSize: 21.sp,
         fontWeight: FontWeight.w700,
       );
   static get titleSmallSemiBold => theme.textTheme.titleSmall!.copyWith(
@@ -100,7 +99,7 @@ class CustomTextStyles {
 // Lexend text style
   static get lexendBlack900 => TextStyle(
         color: appTheme.black900,
-        fontSize: 7.fSize,
+        fontSize: 7.sp,
         fontWeight: FontWeight.w400,
       ).lexend;
 }

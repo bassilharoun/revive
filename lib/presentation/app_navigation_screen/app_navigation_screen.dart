@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:revive/core/utils/size_utils.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:revive/routes/app_routes.dart';
 import 'package:revive/theme/app_decoration.dart';
 import 'package:revive/theme/theme_helper.dart';
@@ -62,7 +62,7 @@ class AppNavigationScreen extends StatelessWidget {
       decoration: AppDecoration.fillOnPrimary,
       child: Column(
         children: [
-          SizedBox(height: 10.v),
+          SizedBox(height: 10.h),
           Align(
             alignment: Alignment.centerLeft,
             child: Padding(
@@ -72,14 +72,14 @@ class AppNavigationScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: appTheme.black900,
-                  fontSize: 20.fSize,
+                  fontSize: 20.sp,
                   fontFamily: 'Roboto',
                   fontWeight: FontWeight.w400,
                 ),
               ),
             ),
           ),
-          SizedBox(height: 10.v),
+          SizedBox(height: 10.h),
           Align(
             alignment: Alignment.centerLeft,
             child: Padding(
@@ -89,17 +89,17 @@ class AppNavigationScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: appTheme.blueGray400,
-                  fontSize: 16.fSize,
+                  fontSize: 16.sp,
                   fontFamily: 'Roboto',
                   fontWeight: FontWeight.w400,
                 ),
               ),
             ),
           ),
-          SizedBox(height: 5.v),
+          SizedBox(height: 5.h),
           Divider(
-            height: 1.v,
-            thickness: 1.v,
+            height: 1.h,
+            thickness: 1.h,
             color: appTheme.black900,
           )
         ],
@@ -121,7 +121,7 @@ class AppNavigationScreen extends StatelessWidget {
         decoration: AppDecoration.fillOnPrimary,
         child: Column(
           children: [
-            SizedBox(height: 10.v),
+            SizedBox(height: 10.h),
             Align(
               alignment: Alignment.centerLeft,
               child: Padding(
@@ -131,18 +131,18 @@ class AppNavigationScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: appTheme.black900,
-                    fontSize: 20.fSize,
+                    fontSize: 20.sp,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w400,
                   ),
                 ),
               ),
             ),
-            SizedBox(height: 10.v),
-            SizedBox(height: 5.v),
+            SizedBox(height: 10.h),
+            SizedBox(height: 5.h),
             Divider(
-              height: 1.v,
-              thickness: 1.v,
+              height: 1.h,
+              thickness: 1.h,
               color: appTheme.blueGray400,
             )
           ],

@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:revive/core/utils/image_constant.dart';
-import 'package:revive/core/utils/size_utils.dart';
 import 'package:revive/theme/custom_text_style.dart';
 import 'package:revive/theme/theme_helper.dart';
 import 'package:revive/widgets/custom_image_view.dart';
-import '../core/app_export.dart';
 
 enum BottomBarEnum { Home, Revive, Report, Profile }
 // ignore_for_file: must_be_immutable
 
-// ignore_for_file: must_be_immutable
 class CustomBottomBar extends StatefulWidget {
   CustomBottomBar({this.onChanged});
 
@@ -18,9 +16,7 @@ class CustomBottomBar extends StatefulWidget {
   @override
   CustomBottomBarState createState() => CustomBottomBarState();
 }
-// ignore_for_file: must_be_immutable
 
-// ignore_for_file: must_be_immutable
 class CustomBottomBarState extends State<CustomBottomBar> {
   int selectedIndex = 0;
 
@@ -54,7 +50,7 @@ class CustomBottomBarState extends State<CustomBottomBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 58.v,
+      height: 58.h,
       decoration: BoxDecoration(
         color: theme.colorScheme.onPrimary,
         boxShadow: [
@@ -79,18 +75,18 @@ class CustomBottomBarState extends State<CustomBottomBar> {
         type: BottomNavigationBarType.fixed,
         items: List.generate(bottomMenuList.length, (index) {
           return BottomNavigationBarItem(
-            icon: Column(
+            activeIcon: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 CustomImageView(
                   imagePath: bottomMenuList[index].icon,
-                  height: 23.v,
+                  height: 23.h,
                   width: 24.h,
                   color: theme.colorScheme.primary,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 2.v),
+                  padding: EdgeInsets.only(top: 2.sp),
                   child: Text(
                     bottomMenuList[index].title ?? "",
                     style: CustomTextStyles.bodySmallPrimary.copyWith(
@@ -100,18 +96,18 @@ class CustomBottomBarState extends State<CustomBottomBar> {
                 )
               ],
             ),
-            activeIcon: Column(
+            icon: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 CustomImageView(
                   imagePath: bottomMenuList[index].activeIcon,
-                  height: 23.v,
+                  height: 23.h,
                   width: 24.h,
                   color: appTheme.gray400,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 4.v),
+                  padding: EdgeInsets.only(top: 4.sp),
                   child: Text(
                     bottomMenuList[index].title ?? "",
                     style: CustomTextStyles.bodySmallGray400.copyWith(
@@ -134,7 +130,6 @@ class CustomBottomBarState extends State<CustomBottomBar> {
   }
 }
 
-// ignore_for_file: must_be_immutable
 class BottomMenuModel {
   BottomMenuModel(
       {required this.icon,

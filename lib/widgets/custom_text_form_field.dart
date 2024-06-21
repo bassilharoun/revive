@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:revive/core/utils/size_utils.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:revive/theme/custom_text_style.dart';
 import 'package:revive/theme/theme_helper.dart';
-import '../core/app_export.dart';
 
 class CustomTextFormField extends StatelessWidget {
   CustomTextFormField(
@@ -120,25 +119,25 @@ class CustomTextFormField extends StatelessWidget {
         isDense: true,
         contentPadding: contentPadding ??
             EdgeInsets.only(
-              top: 11.v,
-              right: 11.h,
-              bottom: 11.v,
+              top: 11.sp,
+              right: 11.sp,
+              bottom: 11.sp,
             ),
         fillColor: fillColor ?? appTheme.blueGray100,
         filled: filled,
         border: borderDecoration ??
             OutlineInputBorder(
-              borderRadius: BorderRadius.circular(9.h),
+              borderRadius: BorderRadius.circular(9.sp),
               borderSide: BorderSide.none,
             ),
         enabledBorder: borderDecoration ??
             OutlineInputBorder(
-              borderRadius: BorderRadius.circular(9.h),
+              borderRadius: BorderRadius.circular(9.sp),
               borderSide: BorderSide.none,
             ),
         focusedBorder: borderDecoration ??
             OutlineInputBorder(
-              borderRadius: BorderRadius.circular(9.h),
+              borderRadius: BorderRadius.circular(9.sp),
               borderSide: BorderSide.none,
             ),
       );
