@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:revive/core/utils/image_constant.dart';
-import 'package:revive/core/utils/size_utils.dart';
 import 'package:revive/theme/app_decoration.dart';
 import 'package:revive/theme/custom_text_style.dart';
 import 'package:revive/theme/theme_helper.dart';
 import 'package:revive/widgets/custom_image_view.dart';
-import '../../../core/app_export.dart'; // ignore: must_be_immutable
 
 class TicketcardItemWidget extends StatelessWidget {
   const TicketcardItemWidget({Key? key})
@@ -20,7 +19,7 @@ class TicketcardItemWidget extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.symmetric(
           horizontal: 29.h,
-          vertical: 4.v,
+          vertical: 4.h,
         ),
         decoration: AppDecoration.outlineBlack.copyWith(
           borderRadius: BorderRadiusStyle.roundedBorder12,
@@ -30,27 +29,27 @@ class TicketcardItemWidget extends StatelessWidget {
           children: [
             CustomImageView(
               imagePath: ImageConstant.imgTicket,
-              height: 73.v,
+              height: 73.h,
               width: 43.h,
               margin: EdgeInsets.only(
                 left: 3.h,
-                top: 3.v,
+                top: 3.h,
               ),
             ),
             CustomImageView(
               imagePath: ImageConstant.imgLaptop,
-              height: 74.v,
+              height: 74.h,
               width: 44.h,
               margin: EdgeInsets.only(
                 left: 12.h,
-                top: 2.v,
+                top: 2.h,
               ),
             ),
             Spacer(),
             Padding(
               padding: EdgeInsets.only(
-                top: 8.v,
-                bottom: 6.v,
+                top: 8.h,
+                bottom: 6.h,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,16 +58,16 @@ class TicketcardItemWidget extends StatelessWidget {
                     "Standing shoulder",
                     style: theme.textTheme.labelLarge,
                   ),
-                  SizedBox(height: 6.v),
+                  SizedBox(height: 6.h),
                   Padding(
                     padding: EdgeInsets.only(left: 3.h),
                     child: Row(
                       children: [
                         CustomImageView(
                           imagePath: ImageConstant.imgArmMuscle,
-                          height: 12.v,
+                          height: 12.h,
                           width: 13.h,
-                          margin: EdgeInsets.only(bottom: 2.v),
+                          margin: EdgeInsets.only(bottom: 2.h),
                         ),
                         Padding(
                           padding: EdgeInsets.only(left: 5.h),
@@ -80,12 +79,12 @@ class TicketcardItemWidget extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 6.v),
+                  SizedBox(height: 6.h),
                   Row(
                     children: [
                       CustomImageView(
                         imagePath: ImageConstant.imgClock,
-                        height: 16.v,
+                        height: 16.h,
                         width: 19.h,
                       ),
                       Padding(

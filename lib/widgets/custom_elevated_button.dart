@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:revive/core/utils/size_utils.dart';
-import '../core/app_export.dart';
-import '../theme/custom_button_style.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'base_button.dart';
 
 class CustomElevatedButton extends BaseButton {
@@ -47,7 +45,7 @@ class CustomElevatedButton extends BaseButton {
   }
 
   Widget get buildElevatedButtonWidget => Container(
-        height: this.height ?? 43.v,
+        height: this.height ?? 43.h,
         width: this.width ?? double.maxFinite,
         margin: margin,
         decoration: decoration,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:revive/core/utils/size_utils.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:revive/theme/theme_helper.dart';
 import '../core/app_export.dart';
 

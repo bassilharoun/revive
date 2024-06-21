@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:revive/core/utils/size_utils.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:revive/routes/app_routes.dart';
 import 'package:revive/theme/theme_helper.dart';
 
@@ -15,8 +15,8 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Sizer(
-      builder: (context, orientation, deviceType) {
+    return ScreenUtilInit(
+      builder: (_, child) {
         return MaterialApp(
           theme: theme,
           title: 'Revive',

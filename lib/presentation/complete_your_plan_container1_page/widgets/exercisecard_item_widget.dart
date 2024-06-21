@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:revive/core/utils/image_constant.dart';
-import 'package:revive/core/utils/size_utils.dart';
 import 'package:revive/theme/app_decoration.dart';
 import 'package:revive/theme/custom_text_style.dart';
 import 'package:revive/theme/theme_helper.dart';
@@ -18,7 +18,7 @@ class ExercisecardItemWidget extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: 42.h,
-        vertical: 5.v,
+        vertical: 5.h,
       ),
       decoration: AppDecoration.outlineBlack900.copyWith(
         borderRadius: BorderRadiusStyle.roundedBorder12,
@@ -27,21 +27,21 @@ class ExercisecardItemWidget extends StatelessWidget {
         children: [
           CustomImageView(
             imagePath: ImageConstant.imgAlarm,
-            height: 73.v,
+            height: 73.h,
             width: 43.h,
           ),
           CustomImageView(
             imagePath: ImageConstant.imgPlay,
-            height: 74.v,
+            height: 74.h,
             width: 44.h,
             margin: EdgeInsets.only(left: 11.h),
           ),
           Spacer(),
           Padding(
             padding: EdgeInsets.only(
-              top: 9.v,
+              top: 9.h,
               right: 18.h,
-              bottom: 4.v,
+              bottom: 4.h,
             ),
             child: Column(
               children: [
@@ -52,19 +52,19 @@ class ExercisecardItemWidget extends StatelessWidget {
                     style: CustomTextStyles.labelLargePrimary,
                   ),
                 ),
-                SizedBox(height: 4.v),
+                SizedBox(height: 4.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CustomImageView(
                       imagePath: ImageConstant.imgFlashlight,
-                      height: 16.adaptSize,
-                      width: 16.adaptSize,
+                      height: 16.h,
+                      width: 16.h,
                     ),
                     Padding(
                       padding: EdgeInsets.only(
                         left: 6.h,
-                        top: 3.v,
+                        top: 3.h,
                       ),
                       child: Text(
                         "Equipment",
@@ -73,15 +73,14 @@ class ExercisecardItemWidget extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(height: 6.v),
+                SizedBox(height: 6.h),
                 SizedBox(
-                  width: 82.h,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CustomImageView(
                         imagePath: ImageConstant.imgClock,
-                        height: 16.v,
+                        height: 16.h,
                         width: 19.h,
                       ),
                       Text(

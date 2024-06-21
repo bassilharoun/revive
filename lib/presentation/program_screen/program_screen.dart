@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:revive/core/utils/image_constant.dart';
-import 'package:revive/core/utils/size_utils.dart';
 import 'package:revive/theme/custom_text_style.dart';
 import 'package:revive/theme/theme_helper.dart';
 import 'package:revive/widgets/custom_image_view.dart';
-import '../../core/app_export.dart';
 import '../../widgets/custom_elevated_button.dart';
 import '../../widgets/custom_icon_button.dart';
 import 'widgets/ticketcard_item_widget.dart';
 
 class ProgramScreen extends StatelessWidget {
-  const ProgramScreen({Key? key})
+  String? title;
+  String? imagePath;
+  ProgramScreen({Key? key, this.title, this.imagePath})
       : super(
           key: key,
         );
@@ -20,23 +21,23 @@ class ProgramScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: SizedBox(
-          width: SizeUtils.width,
+          width: MediaQuery.of(context).size.width,
           child: SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.only(bottom: 5.v),
+              padding: EdgeInsets.only(bottom: 5.h),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   _buildStackClockOne(context),
-                  SizedBox(height: 25.v),
+                  SizedBox(height: 25.h),
                   Padding(
                     padding: EdgeInsets.only(left: 33.h),
                     child: Text(
-                      "Neck Pain",
+                      "$title",
                       style: theme.textTheme.titleSmall,
                     ),
                   ),
-                  SizedBox(height: 8.v),
+                  SizedBox(height: 8.h),
                   Container(
                     width: 147.h,
                     margin: EdgeInsets.only(left: 38.h),
@@ -49,7 +50,7 @@ class ProgramScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 17.v),
+                  SizedBox(height: 17.h),
                   Align(
                     alignment: Alignment.center,
                     child: Padding(
@@ -59,8 +60,8 @@ class ProgramScreen extends StatelessWidget {
                         children: [
                           Padding(
                             padding: EdgeInsets.only(
-                              top: 3.v,
-                              bottom: 6.v,
+                              top: 3.h,
+                              bottom: 6.h,
                             ),
                             child: Column(
                               children: [
@@ -68,7 +69,7 @@ class ProgramScreen extends StatelessWidget {
                                   "2",
                                   style: CustomTextStyles.bodySmallBlack90011_1,
                                 ),
-                                SizedBox(height: 1.v),
+                                SizedBox(height: 1.h),
                                 Text(
                                   "Exercises",
                                   style: CustomTextStyles.bodySmallBlack900,
@@ -80,10 +81,10 @@ class ProgramScreen extends StatelessWidget {
                             flex: 24,
                           ),
                           SizedBox(
-                            height: 39.v,
+                            height: 39.h,
                             child: VerticalDivider(
                               width: 3.h,
-                              thickness: 3.v,
+                              thickness: 3.h,
                             ),
                           ),
                           Spacer(
@@ -91,8 +92,8 @@ class ProgramScreen extends StatelessWidget {
                           ),
                           Padding(
                             padding: EdgeInsets.only(
-                              top: 3.v,
-                              bottom: 6.v,
+                              top: 3.h,
+                              bottom: 6.h,
                             ),
                             child: Column(
                               children: [
@@ -100,7 +101,7 @@ class ProgramScreen extends StatelessWidget {
                                   "5",
                                   style: CustomTextStyles.bodySmallBlack90011_1,
                                 ),
-                                SizedBox(height: 1.v),
+                                SizedBox(height: 1.h),
                                 Text(
                                   "Mins",
                                   style: CustomTextStyles.bodySmallBlack900,
@@ -112,17 +113,17 @@ class ProgramScreen extends StatelessWidget {
                             flex: 26,
                           ),
                           SizedBox(
-                            height: 39.v,
+                            height: 39.h,
                             child: VerticalDivider(
                               width: 3.h,
-                              thickness: 3.v,
+                              thickness: 3.h,
                             ),
                           ),
                           Spacer(
                             flex: 25,
                           ),
                           Padding(
-                            padding: EdgeInsets.symmetric(vertical: 6.v),
+                            padding: EdgeInsets.symmetric(vertical: 6.h),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -144,9 +145,9 @@ class ProgramScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 26.v),
+                  SizedBox(height: 26.h),
                   _buildTicketCard(context),
-                  SizedBox(height: 39.v),
+                  SizedBox(height: 39.h),
                   Padding(
                     padding: EdgeInsets.only(left: 33.h),
                     child: Text(
@@ -154,18 +155,18 @@ class ProgramScreen extends StatelessWidget {
                       style: theme.textTheme.labelLarge,
                     ),
                   ),
-                  SizedBox(height: 9.v),
+                  SizedBox(height: 9.h),
                   Align(
                     alignment: Alignment.center,
                     child: SizedBox(
-                      height: 127.v,
+                      height: 127.h,
                       width: 260.h,
                       child: Stack(
                         alignment: Alignment.topLeft,
                         children: [
                           CustomImageView(
                             imagePath: ImageConstant.imgRectangle108,
-                            height: 127.v,
+                            height: 127.h,
                             width: 260.h,
                             radius: BorderRadius.circular(
                               9.h,
@@ -174,24 +175,25 @@ class ProgramScreen extends StatelessWidget {
                           ),
                           CustomImageView(
                             imagePath: ImageConstant.imgTelevision,
-                            height: 19.v,
+                            height: 19.h,
                             width: 80.h,
                             alignment: Alignment.topLeft,
                             margin: EdgeInsets.only(
                               left: 11.h,
-                              top: 13.v,
+                              top: 13.h,
                             ),
                           )
                         ],
                       ),
                     ),
-                  )
+                  ),
+                  SizedBox(height: 20.h),
+                  _buildKickStart(context)
                 ],
               ),
             ),
           ),
         ),
-        bottomNavigationBar: _buildKickStart(context),
       ),
     );
   }
@@ -199,28 +201,31 @@ class ProgramScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildStackClockOne(BuildContext context) {
     return SizedBox(
-      height: 309.v,
+      height: 300.h,
       width: double.maxFinite,
       child: Stack(
         alignment: Alignment.topLeft,
         children: [
           CustomImageView(
-            imagePath: ImageConstant.imgRectangle93,
-            height: 309.v,
-            width: 360.h,
+            imagePath: "$imagePath",
+            height: 300.h,
+            width: double.infinity,
             alignment: Alignment.center,
+            fit: BoxFit.cover,
           ),
           Padding(
             padding: EdgeInsets.only(
               left: 21.h,
-              top: 33.v,
+              top: 33.h,
             ),
-            child: CustomIconButton(
-              height: 33.adaptSize,
-              width: 33.adaptSize,
-              alignment: Alignment.topLeft,
-              child: CustomImageView(
-                imagePath: ImageConstant.imgClockOnprimary,
+            child: InkWell(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(
+                Icons.arrow_back_ios,
+                color: theme.primaryColor,
+                // size: 20.h,
               ),
             ),
           )
@@ -243,7 +248,7 @@ class ProgramScreen extends StatelessWidget {
           shrinkWrap: true,
           separatorBuilder: (context, index) {
             return SizedBox(
-              height: 10.v,
+              height: 10.h,
             );
           },
           itemCount: 2,
@@ -262,7 +267,7 @@ class ProgramScreen extends StatelessWidget {
       margin: EdgeInsets.only(
         left: 25.h,
         right: 30.h,
-        bottom: 38.v,
+        bottom: 38.h,
       ),
       buttonTextStyle: theme.textTheme.titleMedium!,
     );

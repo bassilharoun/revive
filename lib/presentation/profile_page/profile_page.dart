@@ -1,11 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:revive/core/utils/image_constant.dart';
-import 'package:revive/core/utils/size_utils.dart';
 import 'package:revive/theme/app_decoration.dart';
 import 'package:revive/theme/custom_text_style.dart';
 import 'package:revive/theme/theme_helper.dart';
 import 'package:revive/widgets/custom_image_view.dart';
-import '../../core/app_export.dart'; // ignore_for_file: must_be_immutable
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key})
@@ -22,26 +23,26 @@ class ProfilePage extends StatelessWidget {
           decoration: AppDecoration.fillGray,
           child: Column(
             children: [
-              SizedBox(height: 15.v),
+              SizedBox(height: 15.h),
               _buildStackLine(context),
-              SizedBox(height: 13.v),
+              SizedBox(height: 13.h),
               Text(
                 "Username ",
                 style: CustomTextStyles.titleSmallSemiBold,
               ),
-              SizedBox(height: 2.v),
+              SizedBox(height: 2.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CustomImageView(
                     imagePath: ImageConstant.imgMdiInvite,
-                    height: 19.v,
+                    height: 19.h,
                     width: 18.h,
                   ),
                   Padding(
                     padding: EdgeInsets.only(
                       left: 5.h,
-                      bottom: 2.v,
+                      bottom: 2.h,
                     ),
                     child: Text(
                       "member since 25 12 2023",
@@ -50,7 +51,7 @@ class ProfilePage extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(height: 39.v),
+              SizedBox(height: 39.h),
               Padding(
                 padding: EdgeInsets.only(
                   left: 23.h,
@@ -61,7 +62,7 @@ class ProfilePage extends StatelessWidget {
                   children: [
                     Container(
                       width: 129.h,
-                      padding: EdgeInsets.symmetric(vertical: 15.v),
+                      padding: EdgeInsets.symmetric(vertical: 15.h),
                       decoration: AppDecoration.outlineBlack900.copyWith(
                         borderRadius: BorderRadiusStyle.roundedBorder12,
                       ),
@@ -71,8 +72,8 @@ class ProfilePage extends StatelessWidget {
                         children: [
                           Padding(
                             padding: EdgeInsets.only(
-                              top: 3.v,
-                              bottom: 5.v,
+                              top: 3.h,
+                              bottom: 5.h,
                             ),
                             child: Column(
                               children: [
@@ -80,7 +81,7 @@ class ProfilePage extends StatelessWidget {
                                   "Reps",
                                   style: CustomTextStyles.bodySmallBlack900,
                                 ),
-                                SizedBox(height: 3.v),
+                                SizedBox(height: 3.h),
                                 Text(
                                   " 230",
                                   style: CustomTextStyles.labelLarge,
@@ -89,14 +90,14 @@ class ProfilePage extends StatelessWidget {
                             ),
                           ),
                           SizedBox(
-                            height: 40.adaptSize,
-                            width: 40.adaptSize,
+                            height: 40.h,
+                            width: 40.h,
                             child: Stack(
                               alignment: Alignment.center,
                               children: [
                                 CustomImageView(
                                   imagePath: ImageConstant.imgGroup,
-                                  height: 16.v,
+                                  height: 16.h,
                                   width: 14.h,
                                   alignment: Alignment.centerRight,
                                   margin: EdgeInsets.only(right: 11.h),
@@ -104,8 +105,8 @@ class ProfilePage extends StatelessWidget {
                                 Align(
                                   alignment: Alignment.center,
                                   child: SizedBox(
-                                    height: 40.adaptSize,
-                                    width: 40.adaptSize,
+                                    height: 40.h,
+                                    width: 40.h,
                                     child: CircularProgressIndicator(
                                       value: 0.5,
                                       backgroundColor:
@@ -121,11 +122,11 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      width: 136.h,
+                      width: 128.h,
                       margin: EdgeInsets.only(left: 18.h),
                       padding: EdgeInsets.symmetric(
                         horizontal: 10.h,
-                        vertical: 15.v,
+                        vertical: 15.h,
                       ),
                       decoration: AppDecoration.outlineBlack900.copyWith(
                         borderRadius: BorderRadiusStyle.roundedBorder12,
@@ -134,11 +135,7 @@ class ProfilePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding: EdgeInsets.only(
-                              top: 2.v,
-                              bottom: 5.v,
-                            ),
+                          Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -146,7 +143,7 @@ class ProfilePage extends StatelessWidget {
                                   "Time spent",
                                   style: CustomTextStyles.bodySmallBlack900,
                                 ),
-                                SizedBox(height: 3.v),
+                                SizedBox(height: 3.h),
                                 Padding(
                                   padding: EdgeInsets.only(left: 6.h),
                                   child: Text(
@@ -157,33 +154,36 @@ class ProfilePage extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Container(
-                            height: 40.adaptSize,
-                            width: 40.adaptSize,
-                            margin: EdgeInsets.only(left: 11.h),
-                            child: Stack(
-                              alignment: Alignment.center,
-                              children: [
-                                Align(
-                                  alignment: Alignment.center,
-                                  child: SizedBox(
-                                    height: 40.adaptSize,
-                                    width: 40.adaptSize,
-                                    child: CircularProgressIndicator(
-                                      value: 0.5,
-                                      backgroundColor:
-                                          theme.colorScheme.primary,
-                                      color: theme.colorScheme.primary,
+                          Expanded(
+                            child: Container(
+                              // height: 40.h,
+                              // width: 40.h,
+                              // margin: EdgeInsets.only(left: 11.h),
+                              child: Stack(
+                                alignment: Alignment.center,
+                                children: [
+                                  Align(
+                                    alignment: Alignment.center,
+                                    child: SizedBox(
+                                      height: 40.h,
+                                      width: 40.h,
+                                      child: CircularProgressIndicator(
+                                        value: 0.5,
+                                        backgroundColor:
+                                            theme.colorScheme.primary,
+                                        color: theme.colorScheme.primary,
+                                      ),
                                     ),
                                   ),
-                                ),
-                                CustomImageView(
-                                  imagePath: ImageConstant.imgMingcuteTimeLine,
-                                  height: 20.adaptSize,
-                                  width: 20.adaptSize,
-                                  alignment: Alignment.center,
-                                )
-                              ],
+                                  CustomImageView(
+                                    imagePath:
+                                        ImageConstant.imgMingcuteTimeLine,
+                                    height: 20.h,
+                                    width: 20.h,
+                                    alignment: Alignment.center,
+                                  )
+                                ],
+                              ),
                             ),
                           )
                         ],
@@ -192,17 +192,17 @@ class ProfilePage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 27.v),
+              SizedBox(height: 27.h),
               _buildColumnDailySpark(context),
-              SizedBox(height: 26.v),
+              SizedBox(height: 26.h),
               _buildColumnRehabPlan(context),
-              SizedBox(height: 13.v),
+              SizedBox(height: 13.h),
               CustomImageView(
                 imagePath: ImageConstant.imgVectorSecondarycontainer,
-                height: 3.v,
+                height: 3.h,
                 width: 7.h,
               ),
-              SizedBox(height: 5.v)
+              SizedBox(height: 5.h)
             ],
           ),
         ),
@@ -213,7 +213,7 @@ class ProfilePage extends StatelessWidget {
   /// Section Widget
   Widget _buildStackLine(BuildContext context) {
     return SizedBox(
-      height: 46.v,
+      height: 46.h,
       width: 320.h,
       child: Stack(
         alignment: Alignment.center,
@@ -221,7 +221,7 @@ class ProfilePage extends StatelessWidget {
           Align(
             alignment: Alignment.topCenter,
             child: Padding(
-              padding: EdgeInsets.only(top: 12.v),
+              padding: EdgeInsets.only(top: 12.h),
               child: SizedBox(
                 width: 320.h,
                 child: Divider(
@@ -236,7 +236,7 @@ class ProfilePage extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 7.h),
               padding: EdgeInsets.symmetric(
                 horizontal: 13.h,
-                vertical: 8.v,
+                vertical: 8.h,
               ),
               decoration: AppDecoration.outlineBlack.copyWith(
                 borderRadius: BorderRadiusStyle.circleBorder22,
@@ -247,15 +247,15 @@ class ProfilePage extends StatelessWidget {
                 children: [
                   CustomImageView(
                     imagePath: ImageConstant.imgArrowLeft,
-                    height: 24.adaptSize,
-                    width: 24.adaptSize,
-                    margin: EdgeInsets.only(top: 6.v),
+                    height: 24.h,
+                    width: 24.h,
+                    margin: EdgeInsets.only(top: 6.h),
                     onTap: () {
                       onTapImgArrowleftone(context);
                     },
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: 6.v),
+                    padding: EdgeInsets.symmetric(vertical: 6.h),
                     child: Text(
                       "Profile",
                       style: CustomTextStyles.labelLargeSemiBold,
@@ -263,11 +263,11 @@ class ProfilePage extends StatelessWidget {
                   ),
                   CustomImageView(
                     imagePath: ImageConstant.imgEpSetting,
-                    height: 20.adaptSize,
-                    width: 20.adaptSize,
+                    height: 20.h,
+                    width: 20.h,
                     margin: EdgeInsets.only(
-                      top: 6.v,
-                      bottom: 4.v,
+                      top: 6.h,
+                      bottom: 4.h,
                     ),
                   )
                 ],
@@ -289,7 +289,7 @@ class ProfilePage extends StatelessWidget {
       ),
       padding: EdgeInsets.symmetric(
         horizontal: 16.h,
-        vertical: 15.v,
+        vertical: 15.h,
       ),
       decoration: AppDecoration.outlineBlack900.copyWith(
         borderRadius: BorderRadiusStyle.roundedBorder12,
@@ -302,7 +302,7 @@ class ProfilePage extends StatelessWidget {
             "Daily Spark",
             style: theme.textTheme.titleSmall,
           ),
-          SizedBox(height: 9.v),
+          SizedBox(height: 9.h),
           Align(
             alignment: Alignment.center,
             child: Container(
@@ -321,7 +321,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 9.v)
+          SizedBox(height: 9.h)
         ],
       ),
     );
@@ -336,7 +336,7 @@ class ProfilePage extends StatelessWidget {
       ),
       padding: EdgeInsets.symmetric(
         horizontal: 10.h,
-        vertical: 16.v,
+        vertical: 16.h,
       ),
       decoration: AppDecoration.outlineBlack900.copyWith(
         borderRadius: BorderRadiusStyle.roundedBorder12,
@@ -350,7 +350,7 @@ class ProfilePage extends StatelessWidget {
             "Rehab plan",
             style: theme.textTheme.titleSmall,
           ),
-          SizedBox(height: 7.v),
+          SizedBox(height: 7.h),
           Container(
             margin: EdgeInsets.only(
               left: 3.h,
@@ -358,7 +358,7 @@ class ProfilePage extends StatelessWidget {
             ),
             padding: EdgeInsets.symmetric(
               horizontal: 8.h,
-              vertical: 2.v,
+              vertical: 2.h,
             ),
             decoration: AppDecoration.fillSecondaryContainer.copyWith(
               borderRadius: BorderRadiusStyle.roundedBorder9,
@@ -368,16 +368,16 @@ class ProfilePage extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
-                  height: 33.v,
+                  height: 33.h,
                   width: 32.h,
-                  margin: EdgeInsets.only(top: 2.v),
+                  margin: EdgeInsets.only(top: 2.h),
                   child: Stack(
                     alignment: Alignment.bottomCenter,
                     children: [
                       Align(
                         alignment: Alignment.center,
                         child: Container(
-                          height: 33.v,
+                          height: 33.h,
                           width: 32.h,
                           decoration: BoxDecoration(
                             color: theme.colorScheme.primary,
@@ -390,7 +390,7 @@ class ProfilePage extends StatelessWidget {
                       Align(
                         alignment: Alignment.bottomCenter,
                         child: Padding(
-                          padding: EdgeInsets.only(bottom: 9.v),
+                          padding: EdgeInsets.only(bottom: 9.h),
                           child: Text(
                             "90%",
                             style: CustomTextStyles.bodySmallBlack900,
@@ -403,8 +403,8 @@ class ProfilePage extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(
                     left: 10.h,
-                    top: 11.v,
-                    bottom: 8.v,
+                    top: 11.h,
+                    bottom: 8.h,
                   ),
                   child: Text(
                     "Arms & Shoulder",
@@ -414,8 +414,8 @@ class ProfilePage extends StatelessWidget {
                 Spacer(),
                 Padding(
                   padding: EdgeInsets.only(
-                    top: 13.v,
-                    bottom: 8.v,
+                    top: 13.h,
+                    bottom: 8.h,
                   ),
                   child: Text(
                     "25 12 2023 Sat",
@@ -425,7 +425,7 @@ class ProfilePage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 2.v)
+          SizedBox(height: 2.h)
         ],
       ),
     );

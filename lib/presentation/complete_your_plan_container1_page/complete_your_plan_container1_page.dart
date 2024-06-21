@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:easy_date_timeline/easy_date_timeline.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:revive/core/utils/image_constant.dart';
-import 'package:revive/core/utils/size_utils.dart';
 import 'package:revive/routes/app_routes.dart';
 import 'package:revive/theme/app_decoration.dart';
 import 'package:revive/theme/custom_text_style.dart';
 import 'package:revive/theme/theme_helper.dart';
 import 'package:revive/widgets/custom_image_view.dart';
-import '../../core/app_export.dart';
 import '../../widgets/custom_elevated_button.dart';
 import 'widgets/exercisecard_item_widget.dart';
 
 class CompleteYourPlanContainer1Page extends StatelessWidget {
-
   DateTime selectedDatesFromCalendar1 = DateTime.now();
 
   @override
@@ -24,20 +22,17 @@ class CompleteYourPlanContainer1Page extends StatelessWidget {
           decoration: AppDecoration.fillGray,
           child: Column(
             children: [
-              SizedBox(height: 18.v),
-
+              SizedBox(height: 18.h),
               _buildRowArrowLeft(context),
-              SizedBox(height: 18.v),
+              SizedBox(height: 18.h),
               Text(
                 "Rehabilitation plan made by your Therapist",
                 style: CustomTextStyles.bodySmall12,
               ),
-              // SizedBox(height: 24.v),
               _buildCalendar(context),
-              SizedBox(height: 12.v),
+              SizedBox(height: 12.h),
               _buildExerciseCard(context),
-              // Spacer(),
-              SizedBox(height: 30.v),
+              SizedBox(height: 30.h),
               CustomElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(
@@ -68,7 +63,7 @@ class CompleteYourPlanContainer1Page extends StatelessWidget {
       ),
       padding: EdgeInsets.symmetric(
         horizontal: 6.h,
-        vertical: 9.v,
+        vertical: 9.h,
       ),
       decoration: AppDecoration.outlineBlack900.copyWith(
         borderRadius: BorderRadiusStyle.circleBorder22,
@@ -78,9 +73,9 @@ class CompleteYourPlanContainer1Page extends StatelessWidget {
         children: [
           CustomImageView(
             imagePath: ImageConstant.imgArrowLeft,
-            height: 24.adaptSize,
-            width: 24.adaptSize,
-            margin: EdgeInsets.only(top: 2.v),
+            height: 24.h,
+            width: 24.h,
+            margin: EdgeInsets.only(top: 2.h),
             onTap: () {
               onTapImgArrowleftone(context);
             },
@@ -88,8 +83,8 @@ class CompleteYourPlanContainer1Page extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(
               left: 110.h,
-              top: 4.v,
-              bottom: 4.v,
+              top: 4.h,
+              bottom: 4.h,
             ),
             child: Text(
               "Revive",
@@ -104,7 +99,7 @@ class CompleteYourPlanContainer1Page extends StatelessWidget {
   /// Section Widget
   Widget _buildCalendar(BuildContext context) {
     return SizedBox(
-      height: 63.v,
+      height: 63.h,
       width: double.maxFinite,
       child: EasyDateTimeLine(
         initialDate: selectedDatesFromCalendar1,
@@ -116,7 +111,7 @@ class CompleteYourPlanContainer1Page extends StatelessWidget {
         ),
         dayProps: EasyDayProps(
           width: 28.h,
-          height: 46.v,
+          height: 46.h,
         ),
         onDateChange: (selectedDate) {},
         itemBuilder:
@@ -126,7 +121,7 @@ class CompleteYourPlanContainer1Page extends StatelessWidget {
                   width: 28.h,
                   padding: EdgeInsets.symmetric(
                     horizontal: 7.h,
-                    vertical: 6.v,
+                    vertical: 6.h,
                   ),
                   decoration: BoxDecoration(
                     color: theme.colorScheme.primary,
@@ -146,7 +141,7 @@ class CompleteYourPlanContainer1Page extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 5.v),
+                        padding: EdgeInsets.only(top: 5.h),
                         child: Text(
                           dayName.toString(),
                           style: theme.textTheme.labelMedium!.copyWith(
@@ -159,8 +154,8 @@ class CompleteYourPlanContainer1Page extends StatelessWidget {
               : SizedBox(
                   width: double.maxFinite,
                   child: Divider(
-                    height: 2.v,
-                    thickness: 2.v,
+                    height: 2.h,
+                    thickness: 2.h,
                     color: theme.colorScheme.primary,
                   ),
                 );
@@ -181,7 +176,7 @@ class CompleteYourPlanContainer1Page extends StatelessWidget {
         shrinkWrap: true,
         separatorBuilder: (context, index) {
           return SizedBox(
-            height: 19.v,
+            height: 19.h,
           );
         },
         itemCount: 3,
